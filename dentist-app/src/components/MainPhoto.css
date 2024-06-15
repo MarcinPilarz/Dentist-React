@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+  background-color: white;
+}
+
+.appointment-button {
+  width: 450px;
+  height: 65px;
+  background-color: #7abdb5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  /* text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  right: 24vw;
+  margin-top: 70%;
+  border-radius: 50px;
+  /* display: block; Zmieniono na block, żeby lepiej kontrolować rozmiar i marginesy */
+  /* width: auto; Domyślna szerokość dla lepszego wyglądu przycisku */
+  /* margin: 40px 0 40px 50px; Wyśrodkowanie poziome */
+}
+
+.team {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.team img {
+  width: 100%;
+  max-height: 470px;
+}
+.main-photo-dentist {
+  width: 100%;
+
+  /* height: 770.84px; */
+}
+
+.content {
+  width: 11.5%;
+  /* /* padding: 20px;  */
+  background-color: white;
+}
+
+.h1-main-photo {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  /* margin: 0% 0 10% 15%; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20%;
+  position: relative;
+  right: -9%;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  letter-spacing: 3px;
+  line-height: 170%;
+  font-size: 39px;
+}
+
+/* .content button {
+  width: 100%;
+  border-radius: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 80%;
+} */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .content,
+  .team {
+    width: 100%;
+  }
+
+  .team {
+    justify-content: center;
+  }
+
+  .team img {
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,15 @@
+* {
+  background-color: #d5deef;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.home-page {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  overflow-x: hidden;
+}
