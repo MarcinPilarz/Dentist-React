@@ -1,0 +1,58 @@
+.about-us {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-section-h1 {
+  font-family: "Michroma", sans-serif;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.image-text-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  line-height: 30px;
+}
+
+.about-image {
+  border: 3px dashed #337276;
+  max-width: 400px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.about-image-first {
+  transform: rotate(6deg);
+}
+
+.about-image-second {
+  transform: rotate(-6deg);
+}
+
+.text-description {
+  width: 40%;
+  text-align: justify;
+  /* font-size: 20px; */
+  font-size: 20px;
+  padding: 10px;
+}
+
+.test-description-additional-info {
+  margin-right: 40px;
+  width: 30%;
+}
+.test-description-margin {
+  margin-left: 40px;
+  width: 30%;
+}
