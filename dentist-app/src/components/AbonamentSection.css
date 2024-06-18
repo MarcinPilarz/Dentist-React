@@ -1,0 +1,50 @@
+.abonament-section {
+  padding: 40px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.abonament-title {
+  font-size: 32px;
+  font-family: "Michroma", sans-serif;
+  margin-bottom: 40px;
+  color: #252121;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.abonament-description-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.abonament-description {
+  font-size: 18px;
+  text-align: justify;
+  text-align-last: justify;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+.abonament-button {
+  width: 265px;
+  height: 69px;
+  background-color: #638ecb;
+  font-size: 24px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.abonament-button:hover {
+  background-color: #8aaee0;
+}
