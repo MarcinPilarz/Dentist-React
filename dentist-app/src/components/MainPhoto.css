@@ -1,0 +1,93 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+  background-color: white;
+}
+
+.appointment-button {
+  width: 450px;
+  height: 65px;
+  background-color: #7abdb5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  /* text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  right: 24vw;
+  margin-top: 70%;
+  border-radius: 50px;
+}
+
+.team {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.team img {
+  width: 100%;
+  max-height: 470px;
+}
+.main-photo-dentist {
+  width: 100%;
+}
+
+.content {
+  width: 11.5%;
+
+  background-color: white;
+}
+
+.h1-main-photo {
+  background-color: white;
+  text-align: center;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20%;
+  position: relative;
+  right: -9%;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  letter-spacing: 3px;
+  line-height: 170%;
+  font-size: 39px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Układanie elementów w pionie */
+  }
+
+  .team,
+  .content,
+  .h1-main-photo,
+  .appointment-button {
+    width: 100%; /* Zajmuje całą szerokość kontenera na mniejszych ekranach */
+    justify-content: center; /* Wyśrodkowanie dzieci flex */
+    align-items: center; /* Pionowe wyśrodkowanie dla flex */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin: 1em auto; /* Dodanie odstępów dookoła */
+  }
+
+  .team img {
+    max-height: auto; /* Zdjęcie skaluje się do szerokości kontenera */
+  }
+
+  .appointment-button {
+    position: static; /* Usunięcie pozycjonowania względnego */
+    margin: 20px auto; /* Odpowiednie marginesy */
+  }
+
+  .content {
+    padding: 20px; /* Dodatkowa przestrzeń wewnętrzna */
+  }
+}
