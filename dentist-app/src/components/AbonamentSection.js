@@ -1,5 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./AbonamentSection.css"; // Załóżmy, że style będą w tym pliku
+import AbonamentPage from "./AbonamentPage";
 
 const subscriptionData = {
   title: "Abonamenty",
@@ -9,11 +11,16 @@ const subscriptionData = {
 };
 
 const AbonamentSection = () => {
+  const navigate = useNavigate(); // Użyj useNavigate dla nawigacji
+
+  const handleNavigate = () => {
+    navigate("/abonament-page"); // Funkcja nawigacji
+  };
   return (
     <div className="abonament-section">
       <h1 className="abonament-title">{subscriptionData.title}</h1>
       <p className="abonament-description">{subscriptionData.description}</p>
-      <button className="abonament-button">
+      <button className="abonament-button" onClick={handleNavigate}>
         {subscriptionData.buttonText}
       </button>
     </div>

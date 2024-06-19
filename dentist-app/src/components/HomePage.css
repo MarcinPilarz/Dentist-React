@@ -1,10 +1,10 @@
 * {
-  background-color: #d5deef;
   box-sizing: border-box;
 }
 
 body {
   overflow-x: hidden;
+  background-color: #d5deef;
 }
 
 .home-page {
