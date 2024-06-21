@@ -23,6 +23,11 @@ nav.navbar {
   margin-right: 20px;
 }
 
+.navbar li:hover {
+  cursor: pointer;
+  color: #5d5d5d;
+  font-size: 18px;
+}
 .login-button {
   background-color: #8fffae;
   border: none;

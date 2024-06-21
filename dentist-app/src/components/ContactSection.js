@@ -24,7 +24,7 @@ const contactInfo = {
 
 const ContactSection = () => {
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact-section">
       <h1>Kontakt</h1>
       <div className="contact-grid">
         {Object.values(contactInfo).map((info) => (

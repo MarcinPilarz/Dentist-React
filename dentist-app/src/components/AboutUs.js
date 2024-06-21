@@ -19,7 +19,7 @@ const mockData = {
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us " id="about-us">
       <h1 className="header-section-h1">{mockData.title}</h1>
       <div className="image-text-section">
         <img

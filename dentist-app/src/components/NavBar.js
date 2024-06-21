@@ -1,5 +1,6 @@
 import React from "react";
 import Switch from "react-switch";
+import { Link } from "react-scroll";
 import "./NavBar.css";
 
 function NavBar({ darkMode, setDarkMode }) {
@@ -9,10 +10,51 @@ function NavBar({ darkMode, setDarkMode }) {
   return (
     <nav className="navbar">
       <ul>
-        <li>O nas</li>
-        <li>Usługi</li>
-        <li>Abonament</li>
-        <li>Kontakt</li>
+        <li>
+          <Link
+            to="about-us"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            O nas
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="services"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Usługi
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            to="abonament-section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Abonamenty
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact-section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Kontakt
+          </Link>
+        </li>
       </ul>
 
       <Switch

@@ -7,6 +7,14 @@ import "./Profile.css";
 const Profile = () => {
   const navigate = useNavigate();
 
+  const subscriptionsData = [
+    {
+      name: "Podstawowy",
+      details:
+        "Zawartość: Wizyty profilaktyczne (2 razy w roku), wybielanie zębów (1 raz w roku). Idealny dla: Klientów szukających podstawowej opieki dentystycznej z dodatkiem estetycznym. Korzyści: Utrzymanie zdrowia jamy ustnej i poprawa estetyki uśmiechu.",
+    },
+    // Możesz dodać więcej planów tutaj
+  ];
   const [user, setUser] = useState({
     firstName: "Jan",
     lastName: "Kowalski",
@@ -15,9 +23,14 @@ const Profile = () => {
     phoneNumber: "111-111-111",
     avatarUrl:
       "https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/github_profile_image%201(1).png",
-    subscriptions: [],
+    subscriptions: ["Podstawowy"],
     visits: [],
   });
+  const getUserSubscriptionDetails = (subscriptionName) => {
+    return (
+      subscriptionsData.find((sub) => sub.name === subscriptionName) || null
+    );
+  };
 
   return (
     <div>

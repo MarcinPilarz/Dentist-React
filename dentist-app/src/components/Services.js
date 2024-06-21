@@ -47,7 +47,7 @@ const Services = () => {
     }
   };
   return (
-    <div className="services">
+    <div className="services" id="services">
       <h1 className="services-title">Usługi</h1>
       <div className="services-grid">
         {servicesData.map((service) => (
