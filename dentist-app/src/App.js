@@ -11,6 +11,9 @@ import SuccessPay from "./components/SuccessPay";
 import ErrorPay from "./components/ErrorPay";
 import AppointmentScheduler from "./components/AppointmentScheduler";
 import ApprovedVisit from "./components/ApprovedVisit";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           element={<AppointmentScheduler />}
         />
         <Route path="/approved-visit" element={<ApprovedVisit />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/my-profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );

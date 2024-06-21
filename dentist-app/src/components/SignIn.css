@@ -1,0 +1,158 @@
+/* Główny kontener */
+.signin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Michroma", sans-serif;
+  min-height: 100vh;
+}
+
+/* Nagłówek z nawigacją wsteczną */
+.primitive-navbar-payment {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2190f6; /* Niebieski kolor nagłówka */
+}
+
+.back-button img {
+  cursor: pointer;
+  width: 30px;
+}
+
+/* Tytuł w nagłówku */
+.primitive-navbar-payment h1 {
+  color: white;
+  font-size: 24px;
+}
+
+/* Kontener z zakładkami Logowanie/Rejestracja */
+.signin-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.tab {
+  /* width: 18%; dodać */
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: grey;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  margin: 0 40px;
+  bottom: -30px;
+  text-align: center;
+}
+
+.tab.active {
+  background: black;
+}
+
+/* Formularz logowania */
+.background-sign-in {
+  position: inherit;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  background: linear-gradient(to bottom, #2190f6, #7bd4e8);
+  border-radius: 10px;
+  padding: 100px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  margin-top: -130px;
+}
+
+/* Avatar użytkownika */
+.avatar {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar img {
+  position: relative;
+  width: 150px; /* Ustawienie wielkości avatara */
+  border-radius: 50%;
+  border: 2px solid white;
+  bottom: 30px;
+}
+
+/* Style dla inputów */
+.signin-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 70px;
+}
+
+/* Przycisk logowania */
+.signin-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4caf50; /* Zielony przycisk */
+  color: white;
+  border: none;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+/* Link do przypomnienia hasła */
+.forgot-password {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.background-sign-in > label {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  font-family: "Arial", sans-serif;
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-eye {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input {
+  width: calc(
+    100% - 20px
+  ); /* Mniejsza szerokość, aby zrobić miejsce na ikonę */
+}
+.login-error {
+  background-color: #d05c5c;
+
+  padding: 10px 20px; /* Dodano padding dla estetyki */
+  border-radius: 5px; /* Zaokrąglenie rogów dla lepszego wyglądu */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  width: 30%; /* Szerokość komunikatu, dostosowana do kontenera */
+
+  margin: -65px auto 30px; /* Automatyczne marginesy po bokach wyśrodkują element poziomo */
+  display: block; /* Element jako blok */
+}

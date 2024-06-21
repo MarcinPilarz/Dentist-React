@@ -39,7 +39,7 @@ const AppointmentScheduler = () => {
         <div>
           <NavBar />
         </div>
-        <div className="content">
+        <div className="content-appointment">
           <div className="visits-title">
             {" "}
             <h2>Umów wizytę</h2>

@@ -1,0 +1,88 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 100%;
+  font-family: "Michroma", sans-serif;
+  /* background-color: #f0f3fa; */
+}
+
+.profile-container {
+  /* background: white; */
+  border-radius: 10px;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-left: 40px;
+  /* max-width: 600px; */
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.avatar-section img {
+  width: 520px;
+  height: 508px;
+  border-radius: 50%;
+  border: 10px solid #79a5d8;
+}
+
+.user-details {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.user-details h1,
+.user-details p {
+  font-size: 24px;
+  margin: 40px 30px 0 40px;
+  display: flex;
+}
+
+.change-photo {
+  justify-content: start;
+  align-items: flex-start;
+  text-align: left;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  /* margin-top: 10px; */
+}
+
+.detail {
+  margin-right: 30px; /* Dodaje odstęp po prawej stronie każdego elementu klasy 'detail' */
+}
+
+.subscriptions-section,
+.visits-section {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.section-content {
+  /* background: #e8e8e8; */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.border-change-photo {
+  width: 68%;
+  margin-top: 30px;
+}
