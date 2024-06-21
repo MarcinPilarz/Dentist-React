@@ -9,6 +9,8 @@ import CardPayment from "./components/CardPayment";
 import WaitForAccept from "./components/WaitForAccept";
 import SuccessPay from "./components/SuccessPay";
 import ErrorPay from "./components/ErrorPay";
+import AppointmentScheduler from "./components/AppointmentScheduler";
+import ApprovedVisit from "./components/ApprovedVisit";
 
 function App() {
   return (
@@ -22,6 +24,11 @@ function App() {
         <Route path="/wait-for-accept-payment" element={<WaitForAccept />} />
         <Route path="/success-pay" element={<SuccessPay />} />
         <Route path="/error-pay" element={<ErrorPay />} />
+        <Route
+          path="/appointment-scheduler"
+          element={<AppointmentScheduler />}
+        />
+        <Route path="/approved-visit" element={<ApprovedVisit />} />
       </Routes>
     </BrowserRouter>
   );

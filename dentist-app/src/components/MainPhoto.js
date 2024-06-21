@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainPhoto.css";
 
-function MainPhoto() {
+const MainPhoto = () => {
   return (
     <header className="header">
       <h1 className="h1-main-photo">Gabinet Stomatologiczny</h1>
@@ -17,6 +17,6 @@ function MainPhoto() {
       </div>
     </header>
   );
-}
+};
 
 export default MainPhoto;

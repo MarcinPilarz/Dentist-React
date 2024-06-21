@@ -1,0 +1,34 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.proceed-button {
+  width: 20%;
+  height: 50px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #88f07f;
+
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.proceed-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+.visits-title {
+  font-size: 32px;
+  font-family: "Michroma", sans-serif;
+  margin-bottom: 60px;
+  color: #252121;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  padding-bottom: 0px;
+}
