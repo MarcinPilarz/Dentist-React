@@ -1,0 +1,72 @@
+.card-payment-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prymitive-navbar-payment,
+.background-payment {
+  width: 100%;
+}
+
+.back-button img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.props-name,
+.price-props {
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.expiration-cvc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiration-cvc .input-group {
+  width: 48%; /* Adjusts the width so they sit side by side */
+}
+
+.remember-card {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #575757;
+  font-size: 11px;
+}
+
+.remember-card input {
+  margin-right: 5px;
+}
+
+.button-payment-complete {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-background-payment {
+  height: 130vh;
+}
+.payment-method-chosen {
+  margin-bottom: 60px;
+}
+
+div.card-details input {
+  height: 40px;
+}
+div.card-details label {
+  font-size: 18px;
+  margin-bottom: 2px;
+}

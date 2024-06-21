@@ -1,0 +1,27 @@
+.payment-status-page {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  padding: 20px;
+}
+
+.payment-status-page h2 {
+  display: flex;
+  width: 60%;
+  height: 60%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /* background-color: #aef38d; Zielony dla sukcesu, czerwony dla błędu */
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.success-pay h2 {
+  background-color: #aef38d;
+}

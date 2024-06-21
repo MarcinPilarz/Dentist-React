@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import { useNavigate } from "react-router-dom";
 import "./AbonamentPage.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
 import Footer from "./Footer";
 
@@ -42,6 +43,14 @@ const plans = [
 const AbonamentPage = () => {
   const isLoggedIn = true; // Tymczasowo ustawiamy na true
 
+  const navigate = useNavigate();
+
+  const handleSelectPlan = (plan) => {
+    // Here you can also include authentication checks if needed
+    navigate("/choose-payment", {
+      state: { planName: plan.name, planPrice: plan.price },
+    });
+  };
   return (
     <div>
       <NavBar />
@@ -74,7 +83,10 @@ const AbonamentPage = () => {
               </div>
               <div className="plan-pricing">
                 <p className="plan-price">{plan.price}</p>
-                <button className="plan-button">
+                <button
+                  className="plan-button"
+                  onClick={() => handleSelectPlan(plan)}
+                >
                   {isLoggedIn
                     ? plan.buttonMessage
                     : "Zaloguj się, aby skorzystać z planu"}

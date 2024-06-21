@@ -14,7 +14,7 @@ const AbonamentSection = () => {
   const navigate = useNavigate(); // Użyj useNavigate dla nawigacji
 
   const handleNavigate = () => {
-    navigate("/abonament-page"); // Funkcja nawigacji
+    navigate("/abonament-page");
   };
   return (
     <div className="abonament-section">
