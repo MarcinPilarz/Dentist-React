@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Services.css"; // Załóżmy, że style będą w tym pliku
 
 const servicesData = [
@@ -35,12 +36,26 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+  const isLoggedIn = true;
+
+  const handleServiceClick = (serviceName) => {
+    if (isLoggedIn) {
+      navigate("/appointment-scheduler", { state: { serviceName } });
+    } else {
+      navigate("/signin");
+    }
+  };
   return (
     <div className="services">
       <h1 className="services-title">Usługi</h1>
       <div className="services-grid">
         {servicesData.map((service) => (
-          <div key={service.id} className="service-card">
+          <div
+            key={service.id}
+            className="service-card"
+            onClick={() => handleServiceClick(service.name)}
+          >
             <img
               src={service.icon}
               alt={service.name}
