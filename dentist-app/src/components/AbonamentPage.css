@@ -196,3 +196,13 @@
 
   transform: translate(-50%, -50%);
 }
+
+.abonament-page.dark,
+.abonament-page.dark h1.abonament-title {
+  background-color: #395886;
+  color: white;
+}
+
+.abonament-page.dark h1.abonament-title {
+  border-bottom: 1px solid #fff;
+}

@@ -59,3 +59,29 @@
   margin-left: 40px;
   width: 30%;
 }
+
+.about-us.dark {
+  color: white;
+}
+.header-section-h1.dark-mode {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+@media (max-width: 700px) {
+  .about-image {
+    display: none; /* Ukrywa obrazy na ekranach o szerokości 700px lub mniejszej */
+  }
+
+  .text-description {
+    width: 100%; /* Rozszerza tekst na całą dostępną szerokość */
+    margin-right: 30px;
+  }
+
+  .image-text-section {
+    flex-direction: column; /* Opcjonalnie zmienia układ na kolumnowy dla lepszego czytania */
+    align-items: center;
+  }
+  .test-description-additional-info {
+    margin-right: 2px;
+  }
+}

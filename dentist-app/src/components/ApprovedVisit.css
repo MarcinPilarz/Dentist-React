@@ -44,3 +44,12 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+.approved-visit.dark {
+  color: #fff;
+  background-color: #395886;
+}
+.approved-visit.dark h1 {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}

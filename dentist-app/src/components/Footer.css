@@ -22,9 +22,19 @@
   background-color: #395886;
 }
 
+ul.footer-group:nth-child(2) {
+  margin-left: 50px;
+}
+ul.footer-group:nth-child(1) {
+  margin-left: 20px;
+}
+ul.footer-single {
+  margin-left: -30px;
+}
 .footer-links li {
   font-size: 32px;
   margin: 20px 0;
+
   background-color: #395886;
 }
 
@@ -72,7 +82,7 @@
 .footer-social img {
   width: 40px;
   height: 40px;
-  /* margin: 20px; */
+  margin: 20px;
   background-color: #395886;
 }
 
@@ -84,8 +94,110 @@
   text-align: center;
   font-size: 20px;
   margin-top: 50px;
-  background-color: #395886;
+  /* background-color: #395886; */
 }
 .footer-copy > p {
   background-color: #395886;
+}
+
+.footer.dark {
+  background-color: #d5deef;
+  color: #000000;
+}
+
+.footer.dark .footer-links {
+  background-color: #d5deef;
+  color: #fff;
+}
+
+.footer.dark ul.footer-group {
+  background-color: #d5deef;
+  color: #000000;
+}
+
+.footer.dark li {
+  background-color: #d5deef;
+  color: #000000;
+}
+
+.footer.dark ul.footer-single {
+  background-color: #d5deef;
+  color: #000000;
+}
+
+.footer.dark div.footer-social {
+  background-color: #d5deef;
+  color: #000000;
+}
+
+.footer.dark div.paragraph,
+.footer.dark div.paragraph p,
+.footer.dark div.social-icons,
+.footer.dark div.social-icons a,
+.footer.dark div.social-icons img,
+.footer.dark div.footer-copy p,
+.footer.dark div.footer-logo {
+  background-color: #d5deef;
+  color: #000000;
+}
+
+@media (max-width: 1150px) {
+  ul.footer-group:nth-child(2) {
+    margin-left: 0px;
+  }
+  ul.footer-group:nth-child(1) {
+    margin-left: 0px;
+  }
+  ul.footer-single {
+    margin-left: 0px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-group,
+  .footer-single {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Zapewnia odpowiednie owijanie w przypadku mniejszych ekranów */
+  }
+
+  .footer-group li,
+  .footer-single li {
+    font-size: 24px; /* Zmniejszenie czcionki dla lepszej czytelności */
+    width: 50%; /* Dostosowanie szerokości, aby elementy były obok siebie */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz elementów */
+  }
+
+  .footer-single li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-social {
+    order: 3;
+  }
+
+  .footer-copy {
+    order: 4;
+    margin-top: 20px;
+  }
+
+  .footer-social .social-icons {
+    justify-content: center;
+    margin: 20px 0;
+  }
 }

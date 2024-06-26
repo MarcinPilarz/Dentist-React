@@ -62,32 +62,45 @@
   font-size: 39px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
   .header {
     flex-direction: column; /* Układanie elementów w pionie */
+    align-items: center; /* Wyśrodkowanie elementów poziomo */
+    text-align: center; /* Wyśrodkowanie tekstu dla wszystkich dzieci */
   }
 
   .team,
   .content,
-  .h1-main-photo,
-  .appointment-button {
+  .h1-main-photo {
     width: 100%; /* Zajmuje całą szerokość kontenera na mniejszych ekranach */
-    justify-content: center; /* Wyśrodkowanie dzieci flex */
-    align-items: center; /* Pionowe wyśrodkowanie dla flex */
-    text-align: center; /* Wyśrodkowanie tekstu */
-    margin: 1em auto; /* Dodanie odstępów dookoła */
   }
 
-  .team img {
-    max-height: auto; /* Zdjęcie skaluje się do szerokości kontenera */
+  .team {
+    order: 1; /* Zdjęcie będzie pierwsze */
   }
 
-  .appointment-button {
-    position: static; /* Usunięcie pozycjonowania względnego */
-    margin: 20px auto; /* Odpowiednie marginesy */
+  .h1-main-photo {
+    position: relative;
+    right: 0.00001px;
+    order: 2; /* Tytuł poniżej zdjęcia */
+    margin-top: 20px; /* Dodatkowy odstęp nad tytułem */
+    font-size: 24px; /* Dostosowanie rozmiaru czcionki dla mniejszych ekranów */
+    margin-bottom: 10px; /* Zmniejszenie odstępu pomiędzy tytułem a przyciskiem */
   }
 
   .content {
-    padding: 20px; /* Dodatkowa przestrzeń wewnętrzna */
+    order: 3; /* Przycisk umów wizytę jest ostatni */
+    /* width: auto;  */
+  }
+
+  .appointment-button {
+    position: relative;
+    left: 2%;
+    width: 50%;
+    height: 65px;
+    margin: 0 auto 20px;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 50px;
   }
 }

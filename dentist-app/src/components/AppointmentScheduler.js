@@ -5,12 +5,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./AppointmentScheduler.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const AppointmentScheduler = () => {
   const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Tymczasowe założenie, trzeba to zaimplementować
-
+  const { darkMode } = useDarkMode();
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
@@ -35,7 +36,7 @@ const AppointmentScheduler = () => {
 
   return (
     <div>
-      <div className="appointment-scheduler">
+      <div className={`appointment-scheduler ${darkMode ? "dark" : ""}`}>
         <div>
           <NavBar />
         </div>

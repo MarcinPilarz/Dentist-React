@@ -1,5 +1,5 @@
 .contact-section {
-  background-color: #eef2f5;
+  /* background-color: #eef2f5; */
   padding: 40px;
   text-align: center;
 }
@@ -7,17 +7,13 @@
 .contact-grid {
   display: flex;
   justify-content: space-around;
-  position: relative;
-  height: 600px;
+  flex-wrap: wrap;
 }
 
 .contact-section > h1 {
   font-size: 32px;
   font-family: "Michroma", sans-serif;
-  border-bottom: 2px solid #000;
   color: #252121;
-  display: inline-block;
-  padding-bottom: 10px;
   margin-bottom: 30px;
 }
 
@@ -25,8 +21,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   width: 200px;
+  margin-bottom: 20px;
 }
 
 .contact-icon {
@@ -37,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px; /* Odstęp między ikoną a etykietą */
 }
 
 .contact-icon img {
@@ -44,52 +41,52 @@
   height: 30px;
 }
 
-.contact-label {
-  font-size: 16px;
-  color: #333;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-}
-
+.contact-label,
 .contact-value {
   font-size: 16px;
   color: #333;
-  position: absolute;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .contact-dashed-line {
-  position: absolute;
-  width: 1px;
+  height: 50px; /* Dostosuj zależnie od potrzeb */
+  width: 2px;
   background: repeating-linear-gradient(
     to bottom,
-    #000 0,
-    #000 10px,
+    #395886 0,
+    #395886 10px,
     transparent 10px,
     transparent 20px
   );
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 10px; /* Odstęp między linią a etykietą */
 }
 
-.contact-dashed-line.short {
-  height: 50%;
+div.info-background {
+  border: 2px dashed #395886;
+  font-family: "Michroma", sans-serif;
 }
 
-.contact-dashed-line.long {
-  height: 80%;
+.contact-label {
+  color: #395886;
 }
 
-/* Specyficzne pozycje dla etykiet i wartości */
-.contact-label.short,
-.contact-value.short {
-  bottom: -80px; /* Dostosowanie dla krótszej linii */
+/* Dark mode styles for contact section */
+
+.contact-section.dark .contact-label,
+.contact-section.dark .contact-value {
+  color: #fff; /* white text in dark mode */
 }
 
-.contact-label.long,
-.contact-value.long {
-  bottom: -120px; /* Dostosowanie dla dłuższej linii */
+.contact-section.dark h1 {
+  color: #fff; /* white header in dark mode */
+}
+.contact-section.dark .contact-icon {
+  background-color: #638ecb;
+}
+.contact-section.dark .contact-dashed-line {
+  background-color: #638ecb;
+}
+.contact-section.dark div.info-background {
+  border: 2px dashed #638ecb;
 }

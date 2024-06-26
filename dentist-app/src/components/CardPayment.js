@@ -3,12 +3,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./CardPayment.css"; // Upewnij się, że stworzyłeś ten plik CSS
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const CardPayment = () => {
   const location = useLocation();
   const { planName, planPrice } = location.state;
   const navigate = useNavigate();
-
+  const { darkMode } = useDarkMode();
   const [cardDetails, setCardDetails] = useState({
     cardNumber: "",
     cardHolder: "",
@@ -55,7 +56,7 @@ const CardPayment = () => {
   return (
     <div>
       <div className="choose-payment-page">
-        <div className="prymitive-navbar-payment">
+        <div className={`prymitive-navbar-payment ${darkMode ? "dark" : ""}`}>
           <div className="back-button" onClick={handleBack}>
             <img
               src="https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/Arrow%201.png"
@@ -66,7 +67,11 @@ const CardPayment = () => {
             SmileCare <br></br> Dental
           </h1>
         </div>
-        <div className="background-payment card-background-payment">
+        <div
+          className={`background-payment card-background-payment ${
+            darkMode ? "dark" : ""
+          }`}
+        >
           <p>Nazwa abonamentu:</p>
           <p>{planName.toUpperCase()}</p>
           <p>Cena:</p>

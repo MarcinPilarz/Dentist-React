@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignIn.css"; // Załóżmy, że style będą w tym pliku
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const users = [
   {
@@ -27,7 +28,7 @@ const SignIn = () => {
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const { darkMode } = useDarkMode();
   const handleLogin = () => {
     const user = users.find(
       (user) => user.email === email && user.password === password
@@ -46,7 +47,7 @@ const SignIn = () => {
   return (
     <div>
       <div className="choose-payment-page">
-        <div className="prymitive-navbar-payment">
+        <div className={`prymitive-navbar-payment ${darkMode ? "dark" : ""}`}>
           <div className="back-button" onClick={() => navigate(-1)}>
             <img
               src="https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/Arrow%201.png"

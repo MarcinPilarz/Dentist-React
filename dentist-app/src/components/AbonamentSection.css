@@ -48,3 +48,12 @@
 .abonament-button:hover {
   background-color: #8aaee0;
 }
+
+.abonament-title.dark {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.abonament-description.dark {
+  color: #fff;
+}

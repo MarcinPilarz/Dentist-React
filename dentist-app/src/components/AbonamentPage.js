@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import { useNavigate } from "react-router-dom";
 import "./AbonamentPage.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const plans = [
   {
@@ -42,7 +43,7 @@ const plans = [
 
 const AbonamentPage = () => {
   const isLoggedIn = true; // Tymczasowo ustawiamy na true
-
+  const { darkMode } = useDarkMode();
   const navigate = useNavigate();
 
   const handleSelectPlan = (plan) => {
@@ -54,7 +55,7 @@ const AbonamentPage = () => {
   return (
     <div>
       <NavBar />
-      <div className="abonament-page">
+      <div className={`abonament-page ${darkMode ? "dark" : ""}`}>
         <header>
           <h1 className="abonament-title">Abonamenty</h1>
         </header>

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./AbonamentSection.css"; // Załóżmy, że style będą w tym pliku
 import AbonamentPage from "./AbonamentPage";
+import { useDarkMode } from "./DarkModeContext";
 
 const subscriptionData = {
   title: "Abonamenty",
@@ -11,15 +12,20 @@ const subscriptionData = {
 };
 
 const AbonamentSection = () => {
+  const { darkMode } = useDarkMode();
   const navigate = useNavigate(); // Użyj useNavigate dla nawigacji
 
   const handleNavigate = () => {
     navigate("/abonament-page");
   };
   return (
-    <div className="abonament-section">
-      <h1 className="abonament-title">{subscriptionData.title}</h1>
-      <p className="abonament-description">{subscriptionData.description}</p>
+    <div className="abonament-section" id="abonament-section">
+      <h1 className={`abonament-title ${darkMode ? "dark" : ""}`}>
+        {subscriptionData.title}
+      </h1>
+      <p className={`abonament-description ${darkMode ? "dark" : ""}`}>
+        {subscriptionData.description}
+      </p>
       <button className="abonament-button" onClick={handleNavigate}>
         {subscriptionData.buttonText}
       </button>

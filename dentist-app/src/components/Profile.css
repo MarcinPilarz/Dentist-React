@@ -56,11 +56,10 @@
   text-decoration: underline;
   color: blue;
   cursor: pointer;
-  /* margin-top: 10px; */
 }
 
 .detail {
-  margin-right: 30px; /* Dodaje odstęp po prawej stronie każdego elementu klasy 'detail' */
+  margin-right: 30px;
 }
 
 .subscriptions-section,
@@ -85,4 +84,14 @@
 .border-change-photo {
   width: 68%;
   margin-top: 30px;
+}
+.profile-container.dark {
+  color: #fff;
+}
+.profile-container.dark div.change-photo {
+  color: #c9cbff;
+}
+.profile-container.dark div.section-title {
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }

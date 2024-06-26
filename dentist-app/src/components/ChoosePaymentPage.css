@@ -117,3 +117,16 @@ div.back-button {
 .price-props {
   margin: 0 0 30px 0;
 }
+
+.prymitive-navbar-payment.dark {
+  background-color: #395886;
+}
+
+.prymitive-navbar-payment.dark h1 {
+  color: #d5deef;
+}
+
+.background-payment.dark {
+  background-color: #638ecb;
+  color: #fff;
+}

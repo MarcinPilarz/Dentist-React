@@ -2,13 +2,21 @@ import React from "react";
 import Switch from "react-switch";
 import { Link } from "react-scroll";
 import "./NavBar.css";
+import { useNavigate } from "react-router-dom";
+import { DarkModeProvider } from "./DarkModeContext";
+import { useDarkMode } from "./DarkModeContext";
+function NavBar({}) {
+  const { darkMode, setDarkMode } = useDarkMode();
+  // const handleChange = (checked) => {
+  //   setDarkMode(checked);
+  // };
 
-function NavBar({ darkMode, setDarkMode }) {
-  const handleChange = (checked) => {
-    setDarkMode(checked);
+  const handleNavigate = () => {
+    navigate("/signin");
   };
+  const navigate = useNavigate();
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${darkMode ? "dark" : ""}`}>
       <ul>
         <li>
           <Link
@@ -59,7 +67,7 @@ function NavBar({ darkMode, setDarkMode }) {
 
       <Switch
         className="toggle-button"
-        onChange={handleChange}
+        onChange={setDarkMode}
         checked={darkMode}
         offColor="#000000"
         onColor="#4CAF50"
@@ -71,7 +79,9 @@ function NavBar({ darkMode, setDarkMode }) {
         height={20}
         width={48}
       />
-      <button className="login-button">Zaloguj</button>
+      <button className="login-button" onClick={handleNavigate}>
+        Zaloguj
+      </button>
     </nav>
   );
 }

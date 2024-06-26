@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import "./Profile.css";
+import { useDarkMode } from "./DarkModeContext";
 
 const Profile = () => {
   const navigate = useNavigate();
-
+  const { darkMode } = useDarkMode();
   const subscriptionsData = [
     {
       name: "Podstawowy",
@@ -37,7 +38,7 @@ const Profile = () => {
       <NavBar />
 
       <div className="profile-page">
-        <div className="profile-container">
+        <div className={`profile-container ${darkMode ? "dark" : ""}`}>
           <div className="avatar-section">
             <img src={user.avatarUrl} alt="User Avatar" />
             <div className="user-details">

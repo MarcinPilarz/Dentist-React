@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutUs.css"; // Styl dla komponentu
+import { useDarkMode } from "./DarkModeContext";
 
 const mockData = {
   title: "O nas",
@@ -18,9 +19,12 @@ const mockData = {
 };
 
 const AboutUs = () => {
+  const { darkMode } = useDarkMode();
   return (
-    <div className="about-us " id="about-us">
-      <h1 className="header-section-h1">{mockData.title}</h1>
+    <div className={`about-us ${darkMode ? "dark" : ""}`} id="about-us">
+      <h1 className={`header-section-h1 ${darkMode ? "dark-mode" : ""}`}>
+        {mockData.title}
+      </h1>
       <div className="image-text-section">
         <img
           src={mockData.image1.src}

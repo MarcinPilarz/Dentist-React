@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Services.css"; // Załóżmy, że style będą w tym pliku
+import { useDarkMode } from "./DarkModeContext";
 
 const servicesData = [
   {
@@ -38,6 +39,7 @@ const servicesData = [
 const Services = () => {
   const navigate = useNavigate();
   const isLoggedIn = true;
+  const { darkMode } = useDarkMode();
 
   const handleServiceClick = (serviceName) => {
     if (isLoggedIn) {
@@ -48,7 +50,9 @@ const Services = () => {
   };
   return (
     <div className="services" id="services">
-      <h1 className="services-title">Usługi</h1>
+      <h1 className={`services-title ${darkMode ? "dark-mode" : ""}`}>
+        Usługi
+      </h1>
       <div className="services-grid">
         {servicesData.map((service) => (
           <div

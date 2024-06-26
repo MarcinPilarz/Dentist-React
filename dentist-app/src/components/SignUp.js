@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUp.css"; // Make sure the CSS file is created and linked
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
@@ -55,7 +57,7 @@ const SignUp = () => {
   return (
     <div>
       <div className="choose-payment-page">
-        <div className="prymitive-navbar-payment">
+        <div className={`prymitive-navbar-payment ${darkMode ? "dark" : ""}`}>
           <div className="back-button" onClick={() => navigate(-1)}>
             <img
               src="https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/Arrow%201.png"

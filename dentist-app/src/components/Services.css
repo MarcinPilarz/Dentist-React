@@ -64,3 +64,8 @@
   background-color: #8aaee0;
   cursor: pointer;
 }
+
+.services-title.dark-mode {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}

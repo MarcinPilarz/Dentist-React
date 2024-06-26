@@ -3,31 +3,39 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./BlikPayment.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const BlikPayment = () => {
   const location = useLocation(); // Ten hook zapewnia dostęp do obiektu lokalizacji
   const { planName, planPrice } = location.state; // Destrukturyzacja stanu z lokalizacji
   const navigate = useNavigate();
-
+  const { darkMode } = useDarkMode();
   const [blikCode, setBlikCode] = useState(new Array(6).fill(""));
 
   const handleChange = (value, index) => {
-    // Sprawdź, czy wprowadzony znak jest cyfrą
-    if (!value.match(/[0-9]/)) return; // Jeśli nie jest cyfrą, zignoruj wprowadzenie
-
+    if (!value.match(/[0-9]/)) return;
     const newBlikCode = [...blikCode];
     newBlikCode[index] = value.slice(0, 1);
     setBlikCode(newBlikCode);
-
-    // Automatyczne przejście do następnego inputa, jeśli wprowadzono cyfrę
     if (index < 5 && value) {
       document.getElementById(`blik-input-${index + 1}`).focus();
     }
   };
 
+  const isValidBlikCode = () => {
+    return (
+      blikCode.join("").length === 6 &&
+      blikCode.every((char) => char.match(/[0-9]/))
+    );
+  };
+
   const handleSubmit = () => {
-    console.log("Processing BLIK payment with code:", blikCode.join(""));
-    // Tutaj można dodać logikę przetwarzania płatności
+    if (isValidBlikCode()) {
+      console.log("Processing BLIK payment with code:", blikCode.join(""));
+      navigate("/wait-for-accept-payment", { state: { planName, planPrice } });
+    } else {
+      alert("Invalid BLIK code. Please check your input and try again.");
+    }
   };
 
   const handleBack = () => {
@@ -37,7 +45,7 @@ const BlikPayment = () => {
   return (
     <div>
       <div className="choose-payment-page">
-        <div className="prymitive-navbar-payment">
+        <div className={`prymitive-navbar-payment ${darkMode ? "dark" : ""}`}>
           <div className="back-button" onClick={handleBack}>
             <img
               src="https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/Arrow%201.png"
@@ -48,7 +56,7 @@ const BlikPayment = () => {
             SmileCare <br></br> Dental
           </h1>
         </div>
-        <div className="background-payment">
+        <div className={`background-payment ${darkMode ? "dark" : ""}`}>
           <p>{`Nazwa abonamentu: `}</p>
           <p className="props-name">{planName.toUpperCase()}</p>
           <p>{`Cena:`}</p>
