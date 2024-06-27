@@ -8,7 +8,7 @@
 }
 
 .abonament-title {
-  font-size: 32px;
+  font-size: 3vw;
   font-family: "Michroma", sans-serif;
   margin-bottom: 40px;
   color: #252121;
@@ -24,21 +24,23 @@
 }
 
 .abonament-description {
-  font-size: 18px;
+  font-size: 1.5vw;
   text-align: justify;
   text-align-last: justify;
-  margin-bottom: 30px;
+  margin-bottom: 3vw;
   width: 80%;
 }
 
 .abonament-button {
-  width: 265px;
-  height: 69px;
+  width: auto; /* Dostosowanie szerokości przycisku do zawartości */
+  min-width: 265px; /* Minimalna szerokość przycisku */
+  height: auto; /* Dostosowanie wysokości */
+  min-height: 69px; /* Minimalna wysokość przycisku */
   background-color: #638ecb;
-  font-size: 24px;
+  font-size: 1.5vw;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 1vw 2vw;
   font-weight: bold;
   cursor: pointer;
   border-radius: 50px;
@@ -56,4 +58,19 @@
 
 .abonament-description.dark {
   color: #fff;
+}
+@media (max-width: 700px) {
+  .abonament-title {
+    font-size: 32px;
+  }
+
+  .abonament-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .abonament-button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
 }

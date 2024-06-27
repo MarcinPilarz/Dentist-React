@@ -34,11 +34,11 @@ const SignIn = () => {
       (user) => user.email === email && user.password === password
     );
     if (user) {
-      setError(false); // Resetowanie błędu przy poprawnym logowaniu
+      setError(false);
       alert("Login successful!");
-      navigate("/appointment-scheduler", { state: { userEmail: user.email } });
+      navigate("/", { state: { userEmail: user.email } });
     } else {
-      setError(true); // Ustawienie błędu, gdy dane są niepoprawne
+      setError(true);
     }
   };
   const togglePasswordVisibility = () => {

@@ -1,7 +1,7 @@
 .about-us {
   font-family: "Inter", sans-serif;
   color: #333;
-  padding: 20px;
+  padding: 2vw;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -9,30 +9,33 @@
 }
 
 .header-section-h1 {
-  font-size: 32px;
+  font-size: 3vw;
   font-family: "Michroma", sans-serif;
   border-bottom: 2px solid #000;
   color: #252121;
   display: inline-block;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  padding-bottom: 0.5vw;
+  margin-bottom: 2vw;
 }
 
 .image-text-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-  line-height: 30px;
-  font-size: 18px;
+  margin: 2vw 0;
+  line-height: 2vw; /* Dynamiczny interlinia */
+  font-size: 1.8vw; /* Dynamiczny rozmiar czcionki */
 }
 
 .about-image {
-  border: 3px dashed #337276;
-  max-width: 400px;
-  margin: 20px;
+  border: 0.3vw dashed #337276;
+  min-width: 565px; /* Minimalna szerokość obrazu */
+  min-height: 437px; /* Minimalna wysokość obrazu */
+  width: 40vw; /* Szerokość jako procent szerokości widoku, skaluje się w górę */
+  height: auto; /* Wysokość automatycznie dostosowuje się do szerokości, zachowując proporcje */
+  margin: 2vw;
   transition: transform 0.3s ease-in-out;
-  padding: 10px;
+  padding: 1vw;
 }
 
 .about-image-first {
@@ -47,8 +50,8 @@
   width: 40%;
   text-align: justify;
   /* font-size: 20px; */
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.8vw;
+  padding: 1vw;
 }
 
 .test-description-additional-info {
@@ -56,7 +59,7 @@
   width: 30%;
 }
 .test-description-margin {
-  margin-left: 40px;
+  margin: 1vw 4vw;
   width: 30%;
 }
 
@@ -75,13 +78,20 @@
   .text-description {
     width: 100%; /* Rozszerza tekst na całą dostępną szerokość */
     margin-right: 30px;
+    font-size: 18px;
   }
 
   .image-text-section {
     flex-direction: column; /* Opcjonalnie zmienia układ na kolumnowy dla lepszego czytania */
     align-items: center;
+    line-height: 30px;
+    letter-spacing: 1.5px;
   }
   .test-description-additional-info {
     margin-right: 2px;
+  }
+
+  .header-section-h1 {
+    font-size: 32px;
   }
 }

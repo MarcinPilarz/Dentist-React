@@ -25,3 +25,13 @@
 .success-pay h2 {
   background-color: #aef38d;
 }
+@media (max-width: 770px) {
+  .payment-status-page h2 {
+    width: 100% !important;
+    font-size: 16px;
+  }
+
+  .payment-status-page {
+    padding: 10px;
+  }
+}

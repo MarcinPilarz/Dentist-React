@@ -7,24 +7,26 @@
 }
 
 .proceed-button {
-  width: 20%;
-  height: 50px;
+  width: 15%;
+  height: 6vw;
   padding: 10px 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
   background-color: #88f07f;
 
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  font-size: 1.2vw;
 }
 
 .proceed-button:disabled {
   background-color: gray;
   cursor: not-allowed;
+  font-size: 1.4vw;
 }
 .visits-title {
-  font-size: 32px;
+  font-size: 3vw;
   font-family: "Michroma", sans-serif;
   margin-bottom: 60px;
   color: #252121;
@@ -33,7 +35,38 @@
   padding-bottom: 0px;
 }
 
-.appointment-scheduler .visits-title {
+/* .react-datepicker {
+  font-size: 1.2vw;
+  width: 30vw;
+}
+
+.react-datepicker__header {
+  padding: 1vw;
+}
+
+.react-datepicker__day-name {
+  font-size: 1.2vw;
+  margin: 1.38vw;
+}
+
+.react-datepicker__day {
+  width: 3.65vw;
+  height: 4vw;
+  line-height: 5vw;
+}
+
+.react-datepicker__day--selected {
+  font-size: 1.4vw;
+}
+
+.react-datepicker__day--today {
+  font-size: 1.4vw;
+}
+
+.react-datepicker__day--disabled {
+  font-size: 1.2vw;
+} */
+.appointment-scheduler.dark .visits-title {
   color: white;
   border-bottom: 1px solid #fff;
 }
@@ -43,6 +76,9 @@
     font-size: 11px;
   }
 
+  button.proceed-button {
+    font-size: 11px;
+  }
   .proceed-button {
     width: 60%;
     font-size: 11px;

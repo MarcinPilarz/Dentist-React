@@ -8,7 +8,7 @@
 }
 
 .approved-visit h1 {
-  font-size: 32px;
+  font-size: 3vw;
   font-family: "Michroma", sans-serif;
   margin-bottom: 60px;
   color: #252121;
@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8vw;
 
   text-align: center;
   margin-bottom: 5px;
@@ -36,7 +36,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.2vw;
   margin-top: 20px;
 }
 

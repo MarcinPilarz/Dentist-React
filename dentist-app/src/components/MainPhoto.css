@@ -17,12 +17,13 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
   cursor: pointer;
   position: relative;
   right: 24vw;
   margin-top: 70%;
   border-radius: 50px;
+  margin-left: auto;
 }
 
 .team {
@@ -33,7 +34,7 @@
 
 .team img {
   width: 100%;
-  max-height: 470px;
+  max-height: auto;
 }
 .main-photo-dentist {
   width: 100%;
@@ -102,5 +103,29 @@
     padding: 15px 32px;
     font-size: 16px;
     border-radius: 50px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .appointment-button {
+    width: 15vw; /* Szerokość jako procent szerokości widoku */
+    height: 5vh; /* Wysokość jako procent wysokości widoku */
+    right: 150%; /* Dostosowane przesunięcie do prawej */
+    position: relative; /* Ustawienie pozycji względnej */
+    margin: 0 auto; /* Wyśrodkowanie przycisku */
+    min-width: 450px; /* Minimalna szerokość, aby zapewnić czytelność */
+    min-height: 65px; /* Minimalna wysokość, aby zapewnić czytelność */
+    /* right: 180%; */
+    margin-top: 2%;
+    font-size: 1vw;
+  }
+
+  /* .header {
+    padding: 20px 100px;
+  } */
+
+  .h1-main-photo {
+    /* margin-bottom: 1%;  */
+    font-size: 3vw; /* Dynamiczne skalowanie rozmiaru czcionki w zależności od szerokości widoku */
   }
 }

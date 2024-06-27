@@ -69,3 +69,29 @@
   color: #fff;
   border-bottom: 2px solid #fff;
 }
+
+@media (min-width: 1024px) {
+  .services-title {
+    font-size: 2.5vw; /* Scalable font size */
+    margin-bottom: 1.5vw; /* Relative margin */
+  }
+
+  .services-grid {
+    gap: 1.5vw;
+  }
+
+  .service-card {
+    width: 24vw; /* Relative width to the viewport */
+    height: auto; /* Height adjusted based on content */
+    padding: 1vw; /* Scalable padding */
+  }
+
+  .service-icon {
+    width: 12vw; /* Scalable width for the icon */
+    height: auto; /* Height adjusted based on aspect ratio */
+  }
+
+  .service-name {
+    font-size: 1.5vw; /* Scalable font size */
+  }
+}

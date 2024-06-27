@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
-  padding: 20px;
+  padding: 1.2vw;
   width: 100%;
   font-family: "Michroma", sans-serif;
   /* background-color: #f0f3fa; */
@@ -17,9 +17,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 1.2vw;
   width: 100%;
-  margin-left: 40px;
+  margin-left: 2vw;
   /* max-width: 600px; */
 }
 
@@ -31,59 +31,74 @@
 }
 
 .avatar-section img {
-  width: 520px;
-  height: 508px;
+  width: 42vw;
+  height: 40vw;
   border-radius: 50%;
-  border: 10px solid #79a5d8;
+  border: 0.5vw solid #79a5d8;
 }
 
 .user-details {
   flex-grow: 1;
-  padding-left: 20px;
+  padding-left: 1.2vw;
+  width: 1000vw;
 }
 
 .user-details h1,
 .user-details p {
-  font-size: 24px;
-  margin: 40px 30px 0 40px;
+  font-size: 2vw;
+  margin: 2vw;
   display: flex;
 }
 
-.change-photo {
+.border-change-photo-one .change-photo-one {
   justify-content: start;
   align-items: flex-start;
   text-align: left;
   text-decoration: underline;
   color: blue;
   cursor: pointer;
+  font-size: 1.5vw;
+}
+.border-change-photo .change-photo {
+  justify-content: start;
+  align-items: flex-start;
+  text-align: left;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  font-size: 1.5vw;
+  display: none;
+  /* width: 0vw; */
+  /* height: ; */
 }
 
 .detail {
-  margin-right: 30px;
+  margin-right: 2vw;
 }
 
 .subscriptions-section,
 .visits-section {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 6vw;
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 2.5vw;
   color: #333;
-  margin-bottom: 10px;
-  font-size: 32px;
+  margin-bottom: 1vw;
+  /* font-size: 32px; */
 }
 
 .section-content {
   /* background: #e8e8e8; */
   padding: 10px;
   border-radius: 5px;
+  font-size: 1.2vw;
 }
 
-.border-change-photo {
+.border-change-photo-one {
   width: 68%;
-  margin-top: 30px;
+  margin-top: 2vw;
 }
 .profile-container.dark {
   color: #fff;
@@ -91,7 +106,74 @@
 .profile-container.dark div.change-photo {
   color: #c9cbff;
 }
+.profile-container.dark div.change-photo-one {
+  color: #c9cbff;
+}
 .profile-container.dark div.section-title {
   color: #fff;
   border-bottom: 2px solid #fff;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    display: flex;
+    flex-direction: column; /* Ustawia główną oś kolumny na stronie profilu */
+    align-items: center;
+  }
+  .change-photo-one {
+    display: none;
+  }
+  .avatar-section {
+    display: flex;
+    flex-direction: column; /* Ustawia elementy w kolumnie dla sekcji avatara */
+    align-items: center; /* Centruje elementy w poziomie */
+    width: 100%; /* Pełna szerokość kontenera */
+  }
+
+  .avatar-section img {
+    order: 1; /* Ustawia obrazek na pierwszej pozycji */
+    width: 190px; /* Dostosowuje szerokość obrazka */
+    height: 190px; /* Dostosowuje wysokość obrazka */
+    margin-bottom: 10px; /* Dodaje margines poniżej obrazka */
+  }
+
+  .border-change-photo .change-photo {
+    display: inline;
+  }
+  .border-change-photo {
+    order: 2; /* Ustawia zmianę zdjęcia na drugiej pozycji */
+    width: 100%; /* Pełna szerokość */
+    text-align: center; /* Tekst wyśrodkowany */
+    padding: 10px 0; /* Padding wokół tekstu */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  .user-details {
+    order: 3; /* Ustawia szczegóły użytkownika na trzeciej pozycji */
+    width: 100%; /* Pełna szerokość */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .user-details h1,
+  .user-details p {
+    font-size: 12px; /* Zmniejszenie rozmiaru czcionki dla małych ekranów */
+  }
+
+  .subscriptions-section .section-content,
+  .visits-section .section-content {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .subscriptions-section .section-title,
+  .visits-section .section-title {
+    font-size: 14px;
+  }
 }

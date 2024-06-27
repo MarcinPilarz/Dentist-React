@@ -50,13 +50,17 @@ const Profile = () => {
               <p>Adres: {user.address}</p>
               <p>Telefon: {user.phoneNumber}</p>
             </div>
+
+            <div className="border-change-photo">
+              {" "}
+              <div className="change-photo">Zmień zdjęcie</div>
+            </div>
           </div>
 
-          <div className="border-change-photo">
+          <div className="border-change-photo-one">
             {" "}
-            <div className="change-photo">Zmień zdjęcie</div>
+            <div className="change-photo-one">Zmień zdjęcie</div>
           </div>
-
           <div className="subscriptions-section">
             <div className="section-title abonament-title">Mój Abonament</div>
             <div className="section-content">

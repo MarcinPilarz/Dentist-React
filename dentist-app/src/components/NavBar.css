@@ -4,6 +4,7 @@
   align-items: center;
 
   overflow-x: hidden;
+  font-size: 1.2vw;
 }
 
 nav.navbar {
@@ -13,45 +14,81 @@ nav.navbar {
   list-style-type: none;
   display: flex;
   padding: 0px;
-  margin-left: 20px;
+  margin-left: 2vw;
+  width: 100%;
+}
+.login-button {
+  position: relative;
+  left: 0;
 }
 .navbar ul > li {
-  margin-top: 50px;
+  margin-top: 3vw;
 }
 
 .navbar li {
-  margin-right: 20px;
+  margin-right: 2vw;
+}
+
+.navbar li:last-child {
+  margin-left: auto; /* Pushes the last item to the right */
+  margin-right: 0; /* Removes right margin on the last item */
+  margin-top: -10px;
+}
+
+.controls-container {
+  position: absolute;
+  right: 12vw;
+  top: 12px;
+  width: 100%;
+}
+.toggle-button {
+  right: 4vw;
 }
 
 .navbar li:hover {
   cursor: pointer;
   color: #5d5d5d;
-  font-size: 18px;
+  font-size: 1.4vw;
 }
 .login-button {
   background-color: #8fffae;
   border: none;
 
-  padding: 10px 40px;
+  padding: 0.8vw 3vw;
 
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 0px 40px 30px 0px;
+  font-size: 1.2vw;
+  /* margin: 0px 40px 30px 0px; */
+  margin-right: 2vw;
+  margin-bottom: 2vw;
   cursor: pointer;
   border-radius: 100px;
 }
 
-.toggle-button {
-  position: relative;
-  left: 26%;
-  right: 20%;
-  margin-right: 5%;
-  top: -12px;
+div.login-toggle-container {
+  display: flex;
+  align-items: center;
+  padding: 0 1vw; /* Dodanie paddingu jako 1% szerokości widoku */
 }
 
-.navbar-dark {
+.toggle-button {
+  margin-right: 1vw;
+  margin-bottom: -0.5vh;
+  /* right: -90vw; */
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between elements in the container */
+  justify-content: flex-end;
+}
+/* .toggle-button {
+  z-index: 2;
+} */
+.toggle .navbar-dark {
   background-color: #1a1a1a;
 }
 
@@ -64,4 +101,158 @@ nav.navbar {
 }
 .navbar.dark {
   color: #fff;
+}
+.menu-icon,
+.navbar-brand {
+  display: none;
+}
+/* .controls-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-right: 2vw;
+}
+.toggle-button {
+  margin-right: 1vw;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+}
+
+.toggle-button {
+  width: 4.5vw !important;
+  height: 2.25vw !important;
+}
+
+.toggle-button .react-switch-bg {
+  width: 4.5vw !important;
+  height: 2.25vw !important;
+}
+
+.toggle-button .react-switch-handle {
+  width: 2vw !important; 
+  height: 2vw !important; 
+  position: absolute;
+  left: 4px; 
+  top: 50%;
+  transform: translateY(
+    -50%
+  ); 
+} */
+.navbar.dark .menu-icon {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    border-bottom: none;
+    overflow-x: hidden;
+  }
+  .navbar {
+    background-color: white;
+    margin-top: 30px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-brand {
+    display: block;
+  }
+
+  .navbar-brand {
+    font-family: "Michroma", sans-serif;
+    font-size: 22px;
+    color: #395886;
+    display: flex;
+    text-align: center;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 60px; /* Adjust top position based on your actual navbar height */
+    left: 0;
+    background-color: white; /* Assuming a light mode background */
+    z-index: 1000;
+  }
+
+  .menu-icon {
+    font-size: 30px;
+    display: block;
+    position: relative;
+    right: 10px; /* Ustawia ikonę menu po prawej stronie */
+    top: -3px;
+  }
+  /* 
+  .controls-container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  } */
+
+  .controls-container {
+    position: inherit;
+    width: 100%;
+  }
+  .toggle-button {
+    position: relative;
+    right: 4vw;
+  }
+  .nav-links.active {
+    display: flex;
+    max-height: 500px; /* Adjust based on content */
+    margin-top: 29px;
+    overflow-x: hidden;
+    width: 98%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    padding: 10px;
+  }
+
+  .navbar li,
+  .login-button {
+    width: 100%; /* Makes sure that login button occupies the full width */
+    padding: 15px;
+    text-align: center;
+    background-color: #fff; /* Adjust the background color to match */
+    border: none;
+    display: block; /* Ensure it's in block format */
+    color: #000; /* Text color */
+    margin: 5px 0; /* Spacing */
+    font-size: 18px; /* Font size similar to other nav items */
+    cursor: pointer;
+  }
+
+  .login-button:hover {
+    cursor: pointer;
+    color: #5d5d5d;
+    font-size: 3vw;
+  }
+
+  .navbar li:hover {
+    cursor: pointer;
+    color: #5d5d5d;
+    font-size: 3vw;
+  }
+  .navbar.dark .nav-links {
+    background-color: #1a1a1a; /* Dark mode background color */
+  }
+  .navbar.dark .nav-links.active {
+    color: #000;
+    background-color: #fff;
+  }
 }

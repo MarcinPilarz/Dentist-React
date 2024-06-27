@@ -11,7 +11,7 @@
 /* Nagłówek z nawigacją wsteczną */
 .primitive-navbar-payment {
   width: 100%;
-  padding: 20px 10px;
+  padding: 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +20,7 @@
 
 .back-button img {
   cursor: pointer;
-  width: 30px;
+  width: 3vw;
 }
 
 /* Tytuł w nagłówku */
@@ -33,25 +33,25 @@
 .signin-tabs {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1vw;
 }
 
 .tab {
   /* width: 18%; dodać */
   position: relative;
-  padding: 10px 20px;
+  padding: 1vw 2vw;
   cursor: pointer;
   background: grey;
-  border-radius: 20px;
+  border-radius: 2vw;
   color: white;
-  font-size: 15px;
-  margin: 0 40px;
-  bottom: -30px;
+  font-size: 1.5vw;
+  margin: 0 4.5vw;
+  bottom: -2.5vw;
   text-align: center;
 }
 
 .tab.active {
-  background: black;
+  background: #262626;
 }
 
 /* Formularz logowania */
@@ -64,57 +64,64 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-width: 400px;
+  max-width: 40vw;
   background: linear-gradient(to bottom, #2190f6, #7bd4e8);
-  border-radius: 10px;
-  padding: 100px;
+  border-radius: 1vw;
+  padding: 10vw;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-  margin-top: -130px;
+  margin-top: -13vw;
+  margin-bottom: 15vw;
 }
 
 /* Avatar użytkownika */
 .avatar {
-  margin: 20px auto;
+  margin: 1vw auto;
   display: flex;
   justify-content: center;
 }
 
 .avatar img {
   position: relative;
-  width: 150px; /* Ustawienie wielkości avatara */
+  width: 15vw; /* Ustawienie wielkości avatara */
   border-radius: 50%;
-  border: 2px solid white;
-  bottom: 30px;
+  border: 0.2vw solid white;
+  bottom: 3vw;
 }
 
 /* Style dla inputów */
 .signin-form input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 1vw;
+  margin: 1vw 0;
   border: none;
-  border-radius: 70px;
+  border-radius: 7vw;
+  font-size: 1.2vw;
 }
 
+.signin-form input::placeholder {
+  font-size: 1.2vw;
+}
 /* Przycisk logowania */
 .signin-form button {
   width: 100%;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 1vw;
+  margin-top: 2vw;
   background-color: #4caf50; /* Zielony przycisk */
   color: white;
   border: none;
-  border-radius: 70px;
+  border-radius: 7vw;
   cursor: pointer;
+  font-size: 1.5vw;
 }
 
 /* Link do przypomnienia hasła */
 .forgot-password {
-  margin-top: 10px;
+  margin-top: 1vw;
   text-align: center;
-  color: white;
+  color: #000;
   cursor: pointer;
+  font-size: 1.2vw;
 }
 
 .background-sign-in > label {
@@ -124,6 +131,7 @@
   align-items: start;
   text-align: start;
   font-family: "Arial", sans-serif;
+  font-size: 1.6vw;
 }
 
 .password-input {
@@ -132,27 +140,36 @@
 }
 
 .password-eye {
-  width: 20px;
+  width: 2vw;
   position: absolute;
-  right: 10px;
+  right: 1vw;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
 .input {
-  width: calc(
-    100% - 20px
-  ); /* Mniejsza szerokość, aby zrobić miejsce na ikonę */
+  width: calc(100% - 2vw); /* Mniejsza szerokość, aby zrobić miejsce na ikonę */
 }
 .login-error {
   background-color: #d05c5c;
 
-  padding: 10px 20px; /* Dodano padding dla estetyki */
-  border-radius: 5px; /* Zaokrąglenie rogów dla lepszego wyglądu */
+  padding: 1vw 2vw; /* Dodano padding dla estetyki */
+  border-radius: 5vw; /* Zaokrąglenie rogów dla lepszego wyglądu */
   text-align: center; /* Wyśrodkowanie tekstu */
   width: 30%; /* Szerokość komunikatu, dostosowana do kontenera */
 
-  margin: -65px auto 30px; /* Automatyczne marginesy po bokach wyśrodkują element poziomo */
+  margin: -12vw auto 4vw; /* Automatyczne marginesy po bokach wyśrodkują element poziomo */
   display: block; /* Element jako blok */
+  font-size: 1.2vw;
+}
+
+@media (max-width: 770px) {
+  .back-button img {
+    width: 30px;
+  }
+
+  .login-error {
+    margin: -12vw auto 4vw; /* Automatyczne marginesy po bokach wyśrodkują element poziomo */
+  }
 }
