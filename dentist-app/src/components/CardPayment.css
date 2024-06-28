@@ -22,7 +22,7 @@
 .input-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
 }
 
 .expiration-cvc {
@@ -31,15 +31,16 @@
 }
 
 .expiration-cvc .input-group {
-  width: 48%; /* Adjusts the width so they sit side by side */
+  width: 48%;
 }
 
 .remember-card {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0.5vw;
   color: #575757;
-  font-size: 11px;
+
+  font-size: 0.57vw;
 }
 
 .remember-card input {
@@ -49,9 +50,9 @@
 .button-payment-complete {
   background-color: #4caf50;
   color: white;
-  padding: 10px 20px;
+  padding: 0.52vw 1.04vw;
   border: none;
-  border-radius: 50px;
+  border-radius: 5vw;
   cursor: pointer;
   width: 100%;
 }
@@ -64,9 +65,120 @@
 }
 
 div.card-details input {
-  height: 40px;
+  height: 2.08vw;
 }
 div.card-details label {
-  font-size: 18px;
-  margin-bottom: 2px;
+  font-size: 0.94vw;
+  margin-bottom: 0.2vw;
+}
+
+.card-payment-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prymitive-navbar-payment,
+.background-payment {
+  width: 100%;
+}
+
+.back-button img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.props-name,
+.price-props {
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1vw;
+}
+
+.expiration-cvc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expiration-cvc .input-group {
+  width: 48%;
+}
+
+.remember-card {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5vw;
+  color: #575757;
+
+  font-size: 0.57vw;
+}
+
+.remember-card input {
+  margin-right: 5px;
+}
+
+.button-payment-complete {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.52vw 1.04vw;
+  border: none;
+  border-radius: 5vw;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-background-payment {
+  height: 130vh;
+}
+.payment-method-chosen {
+  margin-bottom: 60px;
+}
+
+div.card-details input {
+  height: 2.08vw;
+}
+div.card-details label {
+  font-size: 0.94vw;
+  margin-bottom: 0.2vw;
+}
+
+@media (max-width: 700px) {
+  .button-payment-complete {
+    width: 50%;
+    padding: 5.2px 10px;
+    font-size: 12px;
+  }
+
+  div.card-details input {
+    height: 22px;
+  }
+
+  div.card-details input,
+  div.card-details label {
+    width: 100%;
+    text-align: center;
+  }
+
+  div.card-details label {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .expiration-cvc {
+    flex-direction: column;
+  }
+
+  .expiration-cvc .input-group {
+    width: 100%;
+  }
+
+  div.card-details .input-group {
+    width: 100%;
+  }
 }

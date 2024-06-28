@@ -1,15 +1,21 @@
 import React from "react";
-import "./Footer.css"; // Zakładamy, że style są w tym pliku
+import "./Footer.css";
+import { useDarkMode } from "./DarkModeContext";
 
 const Footer = () => {
+  const { darkMode } = useDarkMode();
   return (
-    <footer className="footer">
+    <footer className={`footer ${darkMode ? "dark" : ""}`}>
       <div className="footer-links">
-        <ul>
+        <ul className="footer-group">
           <li>O nas</li>
-          <li>Usługi</li>
           <li>Abonament</li>
+        </ul>
+        <ul className="footer-group">
+          <li>Usługi</li>
           <li>Kontakt</li>
+        </ul>
+        <ul className="footer-single">
           <li>Polityka prywatności</li>
         </ul>
       </div>

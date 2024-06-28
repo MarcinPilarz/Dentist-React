@@ -17,8 +17,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  /* color: white; */
-  /* background-color: #ff0606; Zielony dla sukcesu, czerwony dla błędu */
+
   border-radius: 40px;
   margin-bottom: 20px;
 }

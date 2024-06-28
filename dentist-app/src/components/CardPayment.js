@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./CardPayment.css"; // Upewnij się, że stworzyłeś ten plik CSS
+import "./CardPayment.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { useDarkMode } from "./DarkModeContext";
 
 const CardPayment = () => {
   const location = useLocation();
   const { planName, planPrice } = location.state;
   const navigate = useNavigate();
-
+  const { darkMode } = useDarkMode();
   const [cardDetails, setCardDetails] = useState({
     cardNumber: "",
     cardHolder: "",
@@ -18,10 +19,10 @@ const CardPayment = () => {
   });
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    // Filtruj tylko dla pól numerycznych
+
     let filteredValue = value;
     if (name === "cardNumber" || name === "cvc") {
-      filteredValue = value.replace(/\D/g, ""); // Usuń wszystko co nie jest cyfrą
+      filteredValue = value.replace(/\D/g, "");
     }
     setCardDetails({
       ...cardDetails,
@@ -34,7 +35,6 @@ const CardPayment = () => {
       console.log("Processing card payment with details:", cardDetails);
 
       navigate("/wait-for-accept-payment", { state: { planName, planPrice } });
-      // Logika przetwarzania płatności
     } else {
       alert("Invalid card details. Please check your input and try again.");
     }
@@ -49,13 +49,13 @@ const CardPayment = () => {
     );
   };
   const handleBack = () => {
-    navigate(-1); // Wraca do poprzedniej strony
+    navigate(-1);
   };
 
   return (
     <div>
       <div className="choose-payment-page">
-        <div className="prymitive-navbar-payment">
+        <div className={`prymitive-navbar-payment ${darkMode ? "dark" : ""}`}>
           <div className="back-button" onClick={handleBack}>
             <img
               src="https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/Arrow%201.png"
@@ -66,7 +66,11 @@ const CardPayment = () => {
             SmileCare <br></br> Dental
           </h1>
         </div>
-        <div className="background-payment card-background-payment">
+        <div
+          className={`background-payment card-background-payment ${
+            darkMode ? "dark" : ""
+          }`}
+        >
           <p>Nazwa abonamentu:</p>
           <p>{planName.toUpperCase()}</p>
           <p>Cena:</p>

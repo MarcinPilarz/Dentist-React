@@ -1,33 +1,47 @@
 .blik-code-inputs {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 1vw;
+  margin: 1vw 0;
 }
 
 .blik-input {
-  width: 40px;
-  height: 40px;
+  width: 3vw;
+  height: 3vw;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.2vw;
   border-radius: 4px;
-  border: 2px solid #ccc;
+  border: 0.1vw solid #ccc;
 }
 
 .button-payment-complete {
   background-color: #4caf50;
   color: white;
-  padding: 10px 20px;
+  padding: 0.5vw 1vw;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  width: 100%;
-  max-width: 200px;
+  width: 1vw;
+
+  max-width: 400px;
   opacity: 0.6;
-  margin-top: 20px;
+  margin-top: 2vw;
   transition: opacity 0.3s ease;
+  font-size: 1.6vw;
 }
 
 .button-payment-complete:enabled {
-  opacity: 1; /* Fully opaque when enabled */
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .blik-input {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .button-payment-complete {
+    width: 80%;
+  }
 }

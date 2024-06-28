@@ -1,0 +1,166 @@
+.signin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Michroma", sans-serif;
+  min-height: 100vh;
+}
+
+.primitive-navbar-payment {
+  width: 100%;
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2190f6;
+}
+
+.back-button img {
+  cursor: pointer;
+  width: 3vw;
+}
+
+.primitive-navbar-payment h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.signin-tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+.tab {
+  position: relative;
+  padding: 1vw 2vw;
+  cursor: pointer;
+  background: grey;
+  border-radius: 2vw;
+  color: white;
+  font-size: 1.5vw;
+  margin: 0 4.5vw;
+  bottom: -2.5vw;
+  text-align: center;
+}
+
+.tab.active {
+  background: #262626;
+}
+
+.background-sign-in {
+  position: inherit;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 40vw;
+  background: linear-gradient(to bottom, #2190f6, #7bd4e8);
+  border-radius: 1vw;
+  padding: 10vw;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  margin-top: -13vw;
+  margin-bottom: 15vw;
+}
+
+.avatar {
+  margin: 1vw auto;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar img {
+  position: relative;
+  width: 15vw;
+  border-radius: 50%;
+  border: 0.2vw solid white;
+  bottom: 3vw;
+}
+
+.signin-form input {
+  width: 100%;
+  padding: 1vw;
+  margin: 1vw 0;
+  border: none;
+  border-radius: 7vw;
+  font-size: 1.2vw;
+}
+
+.signin-form input::placeholder {
+  font-size: 1.2vw;
+}
+
+.signin-form button {
+  width: 100%;
+  padding: 1vw;
+  margin-top: 2vw;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 7vw;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.forgot-password {
+  margin-top: 1vw;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+
+.background-sign-in > label {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  font-family: "Arial", sans-serif;
+  font-size: 1.6vw;
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-eye {
+  width: 2vw;
+  position: absolute;
+  right: 1vw;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input {
+  width: calc(100% - 2vw);
+}
+.login-error {
+  background-color: #d05c5c;
+
+  padding: 1vw 2vw;
+  border-radius: 5vw;
+  text-align: center;
+  width: 30%;
+
+  margin: -12vw auto 4vw;
+  display: block;
+  font-size: 1.2vw;
+}
+
+@media (max-width: 770px) {
+  .back-button img {
+    width: 30px;
+  }
+
+  .login-error {
+    margin: -12vw auto 4vw;
+  }
+}

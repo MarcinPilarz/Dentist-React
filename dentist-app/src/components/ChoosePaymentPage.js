@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./ChoosePaymentPage.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
+import "./ChoosePaymentPage.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import BlikPayment from "./BlikPayment";
+import { useDarkMode } from "./DarkModeContext";
 
 const ChoosePaymentPage = () => {
-  const location = useLocation(); // Ten hook zapewnia dostęp do obiektu lokalizacji
-  const { planName, planPrice } = location.state; // Destrukturyzacja stanu z lokalizacji
+  const location = useLocation();
+  const { planName, planPrice } = location.state;
   const [paymentMethod, setPaymentMethod] = useState("");
   const navigate = useNavigate();
-
+  const { darkMode } = useDarkMode();
   const handlePayment = () => {
     if (paymentMethod === "card") {
       console.log("Processing card payment...");
 
       navigate("/card-payment", { state: { planName, planPrice } });
-      // Redirect to card payment processing page or handle it here
     } else if (paymentMethod === "blik") {
       console.log("Processing BLIK payment...");
       navigate("/blik-payment", { state: { planName, planPrice } });
-      // Redirect to BLIK payment processing page or handle it here
     }
   };
 
@@ -29,7 +28,7 @@ const ChoosePaymentPage = () => {
   return (
     <div>
       <div className="choose-payment-page">
-        <div className="prymitive-navbar-payment">
+        <div className={`prymitive-navbar-payment ${darkMode ? "dark" : ""}`}>
           <div className="back-button" onClick={() => navigate(-1)}>
             <img
               src="https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/Arrow%201.png"
@@ -40,7 +39,7 @@ const ChoosePaymentPage = () => {
             SmileCare <br></br> Dental
           </h1>
         </div>
-        <div className="background-payment">
+        <div className={`background-payment ${darkMode ? "dark" : ""}`}>
           <p>{`Nazwa abonamentu: `}</p>
           <p className="props-name">{planName.toUpperCase()}</p>
           <p>{`Cena:`}</p>

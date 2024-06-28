@@ -1,7 +1,7 @@
 .services {
   text-align: center;
   font-family: "Arial", sans-serif;
-  /* background-color: #f4f4f9; */
+
   padding: 20px;
 }
 
@@ -63,4 +63,35 @@
 .service-card:hover .service-name {
   background-color: #8aaee0;
   cursor: pointer;
+}
+
+.services-title.dark-mode {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+@media (min-width: 1024px) {
+  .services-title {
+    font-size: 2.5vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .services-grid {
+    gap: 1.5vw;
+  }
+
+  .service-card {
+    width: 24vw;
+    height: auto;
+    padding: 1vw;
+  }
+
+  .service-icon {
+    width: 12vw;
+    height: auto;
+  }
+
+  .service-name {
+    font-size: 1.5vw;
+  }
 }

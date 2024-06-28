@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Services.css"; // Załóżmy, że style będą w tym pliku
+import "./Services.css";
+import { useDarkMode } from "./DarkModeContext";
 
 const servicesData = [
   {
     id: 1,
     name: "Stomatologia estetyczna",
-    icon: "https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/2441144%201.png", // Zmień ścieżkę na odpowiednią
+    icon: "https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/2441144%201.png",
   },
   {
     id: 2,
@@ -38,6 +39,7 @@ const servicesData = [
 const Services = () => {
   const navigate = useNavigate();
   const isLoggedIn = true;
+  const { darkMode } = useDarkMode();
 
   const handleServiceClick = (serviceName) => {
     if (isLoggedIn) {
@@ -47,8 +49,10 @@ const Services = () => {
     }
   };
   return (
-    <div className="services">
-      <h1 className="services-title">Usługi</h1>
+    <div className="services" id="services">
+      <h1 className={`services-title ${darkMode ? "dark-mode" : ""}`}>
+        Usługi
+      </h1>
       <div className="services-grid">
         {servicesData.map((service) => (
           <div
