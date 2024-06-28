@@ -23,16 +23,16 @@
   justify-content: center;
   align-items: center;
   margin: 2vw 0;
-  line-height: 2vw; /* Dynamiczny interlinia */
-  font-size: 1.8vw; /* Dynamiczny rozmiar czcionki */
+  line-height: 2vw;
+  font-size: 1.8vw;
 }
 
 .about-image {
   border: 0.3vw dashed #337276;
-  min-width: 565px; /* Minimalna szerokość obrazu */
-  min-height: 437px; /* Minimalna wysokość obrazu */
-  width: 40vw; /* Szerokość jako procent szerokości widoku, skaluje się w górę */
-  height: auto; /* Wysokość automatycznie dostosowuje się do szerokości, zachowując proporcje */
+  min-width: 565px;
+  min-height: 437px;
+  width: 40vw;
+  height: auto;
   margin: 2vw;
   transition: transform 0.3s ease-in-out;
   padding: 1vw;
@@ -49,7 +49,7 @@
 .text-description {
   width: 40%;
   text-align: justify;
-  /* font-size: 20px; */
+
   font-size: 1.8vw;
   padding: 1vw;
 }
@@ -72,17 +72,17 @@
 }
 @media (max-width: 700px) {
   .about-image {
-    display: none; /* Ukrywa obrazy na ekranach o szerokości 700px lub mniejszej */
+    display: none;
   }
 
   .text-description {
-    width: 100%; /* Rozszerza tekst na całą dostępną szerokość */
+    width: 100%;
     margin-right: 30px;
     font-size: 18px;
   }
 
   .image-text-section {
-    flex-direction: column; /* Opcjonalnie zmienia układ na kolumnowy dla lepszego czytania */
+    flex-direction: column;
     align-items: center;
     line-height: 30px;
     letter-spacing: 1.5px;

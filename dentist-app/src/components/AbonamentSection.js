@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./AbonamentSection.css"; // Załóżmy, że style będą w tym pliku
+import "./AbonamentSection.css";
 import AbonamentPage from "./AbonamentPage";
 import { useDarkMode } from "./DarkModeContext";
 
@@ -13,7 +13,7 @@ const subscriptionData = {
 
 const AbonamentSection = () => {
   const { darkMode } = useDarkMode();
-  const navigate = useNavigate(); // Użyj useNavigate dla nawigacji
+  const navigate = useNavigate();
 
   const handleNavigate = () => {
     navigate("/abonament-page");

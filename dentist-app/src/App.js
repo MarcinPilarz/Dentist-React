@@ -15,29 +15,35 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Profile from "./components/Profile";
 import { DarkModeProvider } from "./components/DarkModeContext";
+import { NavBarProvider } from "./components/NavBarrContext";
 
 function App() {
   return (
     <BrowserRouter>
       <DarkModeProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/abonament-page" element={<AbonamentPage />} />
-          <Route path="/choose-payment" element={<ChoosePaymentPage />} />
-          <Route path="/blik-payment" element={<BlikPayment />} />
-          <Route path="/card-payment" element={<CardPayment />} />
-          <Route path="/wait-for-accept-payment" element={<WaitForAccept />} />
-          <Route path="/success-pay" element={<SuccessPay />} />
-          <Route path="/error-pay" element={<ErrorPay />} />
-          <Route
-            path="/appointment-scheduler"
-            element={<AppointmentScheduler />}
-          />
-          <Route path="/approved-visit" element={<ApprovedVisit />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/my-profile" element={<Profile />} />
-        </Routes>
+        <NavBarProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/abonament-page" element={<AbonamentPage />} />
+            <Route path="/choose-payment" element={<ChoosePaymentPage />} />
+            <Route path="/blik-payment" element={<BlikPayment />} />
+            <Route path="/card-payment" element={<CardPayment />} />
+            <Route
+              path="/wait-for-accept-payment"
+              element={<WaitForAccept />}
+            />
+            <Route path="/success-pay" element={<SuccessPay />} />
+            <Route path="/error-pay" element={<ErrorPay />} />
+            <Route
+              path="/appointment-scheduler"
+              element={<AppointmentScheduler />}
+            />
+            <Route path="/approved-visit" element={<ApprovedVisit />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/my-profile" element={<Profile />} />
+          </Routes>
+        </NavBarProvider>
       </DarkModeProvider>
     </BrowserRouter>
   );

@@ -1,4 +1,3 @@
-/* Główny kontener */
 .signin-form {
   width: 100%;
   display: flex;
@@ -8,14 +7,13 @@
   min-height: 100vh;
 }
 
-/* Nagłówek z nawigacją wsteczną */
 .primitive-navbar-payment {
   width: 100%;
   padding: 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2190f6; /* Niebieski kolor nagłówka */
+  background-color: #2190f6;
 }
 
 .back-button img {
@@ -23,13 +21,11 @@
   width: 3vw;
 }
 
-/* Tytuł w nagłówku */
 .primitive-navbar-payment h1 {
   color: white;
   font-size: 24px;
 }
 
-/* Kontener z zakładkami Logowanie/Rejestracja */
 .signin-tabs {
   display: flex;
   justify-content: center;
@@ -37,7 +33,6 @@
 }
 
 .tab {
-  /* width: 18%; dodać */
   position: relative;
   padding: 1vw 2vw;
   cursor: pointer;
@@ -54,7 +49,6 @@
   background: #262626;
 }
 
-/* Formularz logowania */
 .background-sign-in {
   position: inherit;
   width: 90%;
@@ -74,7 +68,6 @@
   margin-bottom: 15vw;
 }
 
-/* Avatar użytkownika */
 .avatar {
   margin: 1vw auto;
   display: flex;
@@ -83,13 +76,12 @@
 
 .avatar img {
   position: relative;
-  width: 15vw; /* Ustawienie wielkości avatara */
+  width: 15vw;
   border-radius: 50%;
   border: 0.2vw solid white;
   bottom: 3vw;
 }
 
-/* Style dla inputów */
 .signin-form input {
   width: 100%;
   padding: 1vw;
@@ -102,12 +94,12 @@
 .signin-form input::placeholder {
   font-size: 1.2vw;
 }
-/* Przycisk logowania */
+
 .signin-form button {
   width: 100%;
   padding: 1vw;
   margin-top: 2vw;
-  background-color: #4caf50; /* Zielony przycisk */
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 7vw;
@@ -115,7 +107,6 @@
   font-size: 1.5vw;
 }
 
-/* Link do przypomnienia hasła */
 .forgot-password {
   margin-top: 1vw;
   text-align: center;
@@ -149,18 +140,18 @@
 }
 
 .input {
-  width: calc(100% - 2vw); /* Mniejsza szerokość, aby zrobić miejsce na ikonę */
+  width: calc(100% - 2vw);
 }
 .login-error {
   background-color: #d05c5c;
 
-  padding: 1vw 2vw; /* Dodano padding dla estetyki */
-  border-radius: 5vw; /* Zaokrąglenie rogów dla lepszego wyglądu */
-  text-align: center; /* Wyśrodkowanie tekstu */
-  width: 30%; /* Szerokość komunikatu, dostosowana do kontenera */
+  padding: 1vw 2vw;
+  border-radius: 5vw;
+  text-align: center;
+  width: 30%;
 
-  margin: -12vw auto 4vw; /* Automatyczne marginesy po bokach wyśrodkują element poziomo */
-  display: block; /* Element jako blok */
+  margin: -12vw auto 4vw;
+  display: block;
   font-size: 1.2vw;
 }
 
@@ -170,6 +161,6 @@
   }
 
   .login-error {
-    margin: -12vw auto 4vw; /* Automatyczne marginesy po bokach wyśrodkują element poziomo */
+    margin: -12vw auto 4vw;
   }
 }

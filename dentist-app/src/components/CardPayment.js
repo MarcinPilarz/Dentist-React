@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./CardPayment.css"; // Upewnij się, że stworzyłeś ten plik CSS
+import "./CardPayment.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { useDarkMode } from "./DarkModeContext";
@@ -19,10 +19,10 @@ const CardPayment = () => {
   });
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    // Filtruj tylko dla pól numerycznych
+
     let filteredValue = value;
     if (name === "cardNumber" || name === "cvc") {
-      filteredValue = value.replace(/\D/g, ""); // Usuń wszystko co nie jest cyfrą
+      filteredValue = value.replace(/\D/g, "");
     }
     setCardDetails({
       ...cardDetails,
@@ -35,7 +35,6 @@ const CardPayment = () => {
       console.log("Processing card payment with details:", cardDetails);
 
       navigate("/wait-for-accept-payment", { state: { planName, planPrice } });
-      // Logika przetwarzania płatności
     } else {
       alert("Invalid card details. Please check your input and try again.");
     }
@@ -50,7 +49,7 @@ const CardPayment = () => {
     );
   };
   const handleBack = () => {
-    navigate(-1); // Wraca do poprzedniej strony
+    navigate(-1);
   };
 
   return (

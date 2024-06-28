@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutUs.css"; // Styl dla komponentu
+import "./AboutUs.css";
 import { useDarkMode } from "./DarkModeContext";
 
 const mockData = {

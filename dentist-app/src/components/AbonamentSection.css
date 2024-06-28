@@ -32,10 +32,10 @@
 }
 
 .abonament-button {
-  width: auto; /* Dostosowanie szerokości przycisku do zawartości */
-  min-width: 265px; /* Minimalna szerokość przycisku */
-  height: auto; /* Dostosowanie wysokości */
-  min-height: 69px; /* Minimalna wysokość przycisku */
+  width: auto;
+  min-width: 265px;
+  height: auto;
+  min-height: 69px;
   background-color: #638ecb;
   font-size: 1.5vw;
   color: white;

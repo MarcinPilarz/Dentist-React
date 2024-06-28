@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import { useNavigate } from "react-router-dom";
-import "./AbonamentPage.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
+import "./AbonamentPage.css";
 import Footer from "./Footer";
 import { useDarkMode } from "./DarkModeContext";
 
@@ -42,12 +42,11 @@ const plans = [
 ];
 
 const AbonamentPage = () => {
-  const isLoggedIn = true; // Tymczasowo ustawiamy na true
+  const isLoggedIn = true;
   const { darkMode } = useDarkMode();
   const navigate = useNavigate();
 
   const handleSelectPlan = (plan) => {
-    // Here you can also include authentication checks if needed
     navigate("/choose-payment", {
       state: { planName: plan.name, planPrice: plan.price },
     });

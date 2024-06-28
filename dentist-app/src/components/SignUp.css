@@ -24,7 +24,7 @@
 }
 
 .signup-form input::placeholder {
-  font-size: 1.2vw; /* Ustaw rozmiar czcionki placeholdera */
+  font-size: 1.2vw;
 }
 .signup-form button {
   width: 90%;
@@ -72,13 +72,13 @@
 .input-group {
   display: flex;
   flex-direction: column;
-  width: 48%; /* Aby dwa inputy zmieściły się obok siebie */
+  width: 48%;
 }
 
 .signup-form input {
   width: 100%;
   padding: 1vw;
-  margin-bottom: 0.5vw; /* Mały margines od dołu */
+  margin-bottom: 0.5vw;
   border: 1px solid #ccc;
   border-radius: 0.5vw;
 }

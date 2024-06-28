@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SignIn.css"; // Załóżmy, że style będą w tym pliku
+import "./SignIn.css";
 import Footer from "./Footer";
 import { useDarkMode } from "./DarkModeContext";
 
@@ -13,10 +13,10 @@ const users = [
     password: "password123",
   },
   {
-    firstName: "Anna",
-    lastName: "Kowalska",
+    firstName: "Adam",
+    lastName: "Kowalski",
     phoneNumber: "987654321",
-    email: "anna.kowalska@example.com",
+    email: "adam.kowalski@example.com",
     password: "password321",
   },
 ];
@@ -36,6 +36,15 @@ const SignIn = () => {
     if (user) {
       setError(false);
       alert("Login successful!");
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          phoneNumber: user.phoneNumber,
+        })
+      );
       navigate("/", { state: { userEmail: user.email } });
     } else {
       setError(true);

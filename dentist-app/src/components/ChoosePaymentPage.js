@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./ChoosePaymentPage.css"; // Upewnij się, że ścieżka do pliku CSS jest poprawna
+import "./ChoosePaymentPage.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import BlikPayment from "./BlikPayment";
 import { useDarkMode } from "./DarkModeContext";
 
 const ChoosePaymentPage = () => {
-  const location = useLocation(); // Ten hook zapewnia dostęp do obiektu lokalizacji
-  const { planName, planPrice } = location.state; // Destrukturyzacja stanu z lokalizacji
+  const location = useLocation();
+  const { planName, planPrice } = location.state;
   const [paymentMethod, setPaymentMethod] = useState("");
   const navigate = useNavigate();
   const { darkMode } = useDarkMode();
@@ -17,11 +17,9 @@ const ChoosePaymentPage = () => {
       console.log("Processing card payment...");
 
       navigate("/card-payment", { state: { planName, planPrice } });
-      // Redirect to card payment processing page or handle it here
     } else if (paymentMethod === "blik") {
       console.log("Processing BLIK payment...");
       navigate("/blik-payment", { state: { planName, planPrice } });
-      // Redirect to BLIK payment processing page or handle it here
     }
   };
 

@@ -1,5 +1,4 @@
 .contact-section {
-  /* background-color: #eef2f5; */
   padding: 40px;
   text-align: center;
 }
@@ -36,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1vw; /* Odstęp między ikoną a etykietą */
+  margin-bottom: 1vw;
 }
 
 .contact-icon img {
@@ -53,7 +52,7 @@
 }
 
 .contact-dashed-line {
-  height: 4vw; /* Dostosuj zależnie od potrzeb */
+  height: 4vw;
   width: 0.35vh;
   background: repeating-linear-gradient(
     to bottom,
@@ -62,7 +61,7 @@
     transparent 10px,
     transparent 20px
   );
-  margin-bottom: 1vw; /* Odstęp między linią a etykietą */
+  margin-bottom: 1vw;
 }
 
 div.info-background {
@@ -74,15 +73,13 @@ div.info-background {
   color: #395886;
 }
 
-/* Dark mode styles for contact section */
-
 .contact-section.dark .contact-label,
 .contact-section.dark .contact-value {
-  color: #fff; /* white text in dark mode */
+  color: #fff;
 }
 
 .contact-section.dark h1 {
-  color: #fff; /* white header in dark mode */
+  color: #fff;
 }
 .contact-section.dark .contact-icon {
   background-color: #638ecb;
@@ -113,10 +110,7 @@ div.info-background {
   }
 
   div.info-background {
-    /* width: 100%; */
-    /* height: 100%; */
     border: 2px dashed #395886;
-    /* padding: 20px; */
   }
   .contact-value,
   .contact-label {

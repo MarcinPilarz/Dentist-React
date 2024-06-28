@@ -22,7 +22,7 @@
   border: none;
   cursor: pointer;
   width: 1vw;
-  /* height: auto; */
+
   max-width: 400px;
   opacity: 0.6;
   margin-top: 2vw;
@@ -31,7 +31,7 @@
 }
 
 .button-payment-complete:enabled {
-  opacity: 1; /* Fully opaque when enabled */
+  opacity: 1;
 }
 
 @media (max-width: 700px) {

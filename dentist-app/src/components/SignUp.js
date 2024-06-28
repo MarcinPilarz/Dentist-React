@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SignUp.css"; // Make sure the CSS file is created and linked
+import "./SignUp.css";
 import Footer from "./Footer";
 import { useDarkMode } from "./DarkModeContext";
 

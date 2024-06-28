@@ -6,8 +6,8 @@ import Footer from "./Footer";
 import { useDarkMode } from "./DarkModeContext";
 
 const BlikPayment = () => {
-  const location = useLocation(); // Ten hook zapewnia dostęp do obiektu lokalizacji
-  const { planName, planPrice } = location.state; // Destrukturyzacja stanu z lokalizacji
+  const location = useLocation();
+  const { planName, planPrice } = location.state;
   const navigate = useNavigate();
   const { darkMode } = useDarkMode();
   const [blikCode, setBlikCode] = useState(new Array(6).fill(""));
@@ -39,7 +39,7 @@ const BlikPayment = () => {
   };
 
   const handleBack = () => {
-    navigate(-1); // Wraca do poprzedniej strony
+    navigate(-1);
   };
 
   return (

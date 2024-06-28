@@ -1,9 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 .choose-payment-page {
   display: flex;
   flex-direction: column;
@@ -68,9 +62,7 @@
   cursor: pointer;
   width: 100%;
   height: 100%;
-  /* width: 535px; */
-  /* max-width: 200px;
-  max-height: 50px; */
+
   width: 30vw;
   height: 5vh;
   text-align: center;
@@ -93,7 +85,7 @@ div.back-button {
 }
 .back-button img {
   cursor: pointer;
-  width: 30px; /* Dostosuj rozmiar do potrzeb */
+  width: 30px;
 }
 .prymitive-navbar-payment {
   width: 100%;

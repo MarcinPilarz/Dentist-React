@@ -31,7 +31,7 @@
 }
 
 .expiration-cvc .input-group {
-  width: 48%; /* Adjusts the width so they sit side by side */
+  width: 48%;
 }
 
 .remember-card {
@@ -39,7 +39,7 @@
   align-items: center;
   margin-top: 0.5vw;
   color: #575757;
-  /* font-size: 11px; */
+
   font-size: 0.57vw;
 }
 
@@ -105,7 +105,7 @@ div.card-details label {
 }
 
 .expiration-cvc .input-group {
-  width: 48%; /* Adjusts the width so they sit side by side */
+  width: 48%;
 }
 
 .remember-card {
@@ -113,7 +113,7 @@ div.card-details label {
   align-items: center;
   margin-top: 0.5vw;
   color: #575757;
-  /* font-size: 11px; */
+
   font-size: 0.57vw;
 }
 
@@ -166,19 +166,19 @@ div.card-details label {
   div.card-details label {
     font-size: 12px;
     display: flex;
-    justify-content: center; /* Wyśrodkowanie tekstu w label */
+    justify-content: center;
     align-items: center;
   }
 
   .expiration-cvc {
-    flex-direction: column; /* Zmiana układu na kolumnowy */
+    flex-direction: column;
   }
 
   .expiration-cvc .input-group {
-    width: 100%; /* Ustawienie szerokości input-group na 100% */
+    width: 100%;
   }
 
   div.card-details .input-group {
-    width: 100%; /* Ustawienie szerokości input-group na 100% */
+    width: 100%;
   }
 }

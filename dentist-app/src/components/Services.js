@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Services.css"; // Załóżmy, że style będą w tym pliku
+import "./Services.css";
 import { useDarkMode } from "./DarkModeContext";
 
 const servicesData = [
   {
     id: 1,
     name: "Stomatologia estetyczna",
-    icon: "https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/2441144%201.png", // Zmień ścieżkę na odpowiednią
+    icon: "https://storage.googleapis.com/springbootphoto/springbootphoto/dentist-app/2441144%201.png",
   },
   {
     id: 2,

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 50px; */
+
   background-color: white;
 }
 
@@ -13,11 +13,11 @@
   border: none;
   color: white;
   padding: 15px 32px;
-  /* text-align: center; */
+
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  /* margin: 4px 2px; */
+
   cursor: pointer;
   position: relative;
   right: 24vw;
@@ -65,33 +65,32 @@
 
 @media (max-width: 1240px) {
   .header {
-    flex-direction: column; /* Układanie elementów w pionie */
-    align-items: center; /* Wyśrodkowanie elementów poziomo */
-    text-align: center; /* Wyśrodkowanie tekstu dla wszystkich dzieci */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .team,
   .content,
   .h1-main-photo {
-    width: 100%; /* Zajmuje całą szerokość kontenera na mniejszych ekranach */
+    width: 100%;
   }
 
   .team {
-    order: 1; /* Zdjęcie będzie pierwsze */
+    order: 1;
   }
 
   .h1-main-photo {
     position: relative;
     right: 0.00001px;
-    order: 2; /* Tytuł poniżej zdjęcia */
-    margin-top: 20px; /* Dodatkowy odstęp nad tytułem */
-    font-size: 24px; /* Dostosowanie rozmiaru czcionki dla mniejszych ekranów */
-    margin-bottom: 10px; /* Zmniejszenie odstępu pomiędzy tytułem a przyciskiem */
+    order: 2;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .content {
-    order: 3; /* Przycisk umów wizytę jest ostatni */
-    /* width: auto;  */
+    order: 3;
   }
 
   .appointment-button {
@@ -108,24 +107,19 @@
 
 @media (min-width: 1340px) {
   .appointment-button {
-    width: 15vw; /* Szerokość jako procent szerokości widoku */
-    height: 5vh; /* Wysokość jako procent wysokości widoku */
-    right: 150%; /* Dostosowane przesunięcie do prawej */
-    position: relative; /* Ustawienie pozycji względnej */
-    margin: 0 auto; /* Wyśrodkowanie przycisku */
-    min-width: 450px; /* Minimalna szerokość, aby zapewnić czytelność */
-    min-height: 65px; /* Minimalna wysokość, aby zapewnić czytelność */
-    /* right: 180%; */
+    width: 15vw;
+    height: 5vh;
+    right: 150%;
+    position: relative;
+    margin: 0 auto;
+    min-width: 450px;
+    min-height: 65px;
+
     margin-top: 2%;
     font-size: 1vw;
   }
 
-  /* .header {
-    padding: 20px 100px;
-  } */
-
   .h1-main-photo {
-    /* margin-bottom: 1%;  */
-    font-size: 3vw; /* Dynamiczne skalowanie rozmiaru czcionki w zależności od szerokości widoku */
+    font-size: 3vw;
   }
 }
