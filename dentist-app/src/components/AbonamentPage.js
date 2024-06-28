@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import { useNavigate } from "react-router-dom";
 import "./AbonamentPage.css";
@@ -42,14 +42,23 @@ const plans = [
 ];
 
 const AbonamentPage = () => {
-  const isLoggedIn = true;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { darkMode } = useDarkMode();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+    setIsLoggedIn(!!userData);
+  }, []);
+
   const handleSelectPlan = (plan) => {
-    navigate("/choose-payment", {
-      state: { planName: plan.name, planPrice: plan.price },
-    });
+    if (isLoggedIn) {
+      navigate("/choose-payment", {
+        state: { planName: plan.name, planPrice: plan.price },
+      });
+    } else {
+      navigate("/signin");
+    }
   };
   return (
     <div>
@@ -88,7 +97,7 @@ const AbonamentPage = () => {
                   onClick={() => handleSelectPlan(plan)}
                 >
                   {isLoggedIn
-                    ? plan.buttonMessage
+                    ? "Wybierz plan"
                     : "Zaloguj się, aby skorzystać z planu"}
                 </button>
               </div>
